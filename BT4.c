@@ -1,22 +1,27 @@
 #include <stdio.h>
 
-int main()
+void indexMin(int arr[], int size)
 {
-    char arr[5][30];
-    int n, i;
-    do{
-        printf("\nNhap so luong SV: ");
-        scanf("%d", &n);
-    }while(n < 1);
-    
-	for(i = 0; i < n; i++)
+    int i;
+	printf("Array elements are:\n");
+    for ( i=1; i<=size; i++) 
 	{
-        printf("Ten SV thu %d: ", i+1);
-        fflush(stdin);
-        gets(arr[i]);
+        printf("arr[%d]= ", i);
+        scanf("%d", &arr[i]);
     }
-    for(i = 0; i < n; i++)
-	{
-        printf("\nTen SV thu %d: %s", i+1, arr[i]);
+    int min=arr[1];
+    int vitri=1;
+    for ( i=1; i<=size; i++) {
+        if (min>arr[i]){
+            min=arr[i];
+            vitri = i;
+        }
     }
+    printf("Gia tri nho nhat = %d\n", min);
+    printf("Vi tri phan tu là arr[%d]\n", vitri);
+}
+int main(){
+    int arr[11];
+    indexMin(arr, 10);
+    return 0;
 }

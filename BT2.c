@@ -1,21 +1,20 @@
 #include <stdio.h>
+main()
+{
+	int check, a;
+	//clrscr();
+	printf("nhap mot so:", &a);
+	check = scanf("%d", &a);
+	
 
-int main()
- {
-    int intArr[5];
-    float floatArr[10];
-    int i;
-    for (i=0; i<5; i++) {
-        scanf("%d", &intArr[i]);
-    }
-    floatArr[i]=0;
-    for (i=0; i<5; i++) {
-        floatArr[i]=intArr[i];
-        printf("%d\t", intArr[i]);
-    }
-    for (i=5; i<10; i++) {
-        floatArr[i]=0;
-        printf("%f\t", floatArr[i]);
-    }
-    printf("\n");
-}
+	if(check % 50 == 0)
+	{
+	printf("so nguyen khong chia het cho 50: ");
+	}	retunr(1);
+	{
+	printf("\n so nguyen khong chia het cho 50");
+	scanf("%d", &a);
+	}
+
+	retunr(0);
+}	

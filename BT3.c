@@ -1,29 +1,39 @@
-#include <stdio.h>
-void main()
+#include<stdio.h>
+
+int i;
+void nhap(int a[],int n)
 {
-	int i, sum, Max, Min, ary[10], demMin=0,demMax=0;
-	
-	for(i = 0; i < 10; i++)
+	for (i=0; i<n; i++)
 	{
-		scanf("%d", &ary[i]);
-		sum += ary[i];
+		printf("\nNhap a[%d]= ", i);
+		scanf("%d", &a[i]);
 	}
-	float avg = sum/10;
-	printf("tong cac so la:%d\n", sum);
-	printf("trung binh cong la:%f\n", avg);
-	
-	Max = ary[0];
-	Min = ary[0];
-	for (i = 1; i < 10; i++)
-	{
-		if(ary[i]>Max) Max = ary[i];
-		if(ary[i]<Min) Min = ary[i];
-	}
-	for (i=0;i<10;i++)
-	{
-		if(ary[i] == Max) Max, demMax++;
-		if(ary[i] == Min) Min, demMin++;
-	}
-	printf("so nho nhat la:%d co %d trong mang la \n", Min, demMin);
-	pinntf("so lon nhat la:%d co %d trong mang la \n", Max, demMax);
 }
+	void xuat(int a[], int n)
+	{
+		for(i=0; i<n; i++)
+		{
+			printf("%d\t", a[i]);
+		}
+	}
+		void reverse(int a[], int n)
+		{
+			for(i=n; i>=0;i--)
+			{
+				printf("%d\t", a[i]);
+			}
+		}
+		int main()
+		{
+			int n;
+			printf("\nNhap so phan tu cua mang: ");
+			scanf("%d", &n);
+			
+			int a[n];
+			nhap(a, n);
+			printf("\nPhan tu vua nhap la: \n");
+			xuat(a ,n);
+			printf("\nPhan tu hien thi nguoc lai la: \n");
+			reverse(a, n);
+		
+		}
